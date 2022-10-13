@@ -1,6 +1,0 @@
-C:\m\Vivarium\build\Netural\Vivarium\dll\Cocodemer.Vivarium.Heron\Cocodemer.Vivarium.Heron.dll
-C:\m\Vivarium\build\Netural\Vivarium\dll\Cocodemer.Vivarium.Heron\Cocodemer.Vivarium.Heron.pdb
-C:\m\Vivarium\Cocodemer.Vivarium.Heron\obj\Debug\Cocodemer.Vivarium.Heron.csproj.AssemblyReference.cache
-C:\m\Vivarium\Cocodemer.Vivarium.Heron\obj\Debug\Cocodemer.Vivarium.Heron.csproj.CoreCompileInputs.cache
-C:\m\Vivarium\Cocodemer.Vivarium.Heron\obj\Debug\Cocodemer.Vivarium.Heron.dll
-C:\m\Vivarium\Cocodemer.Vivarium.Heron\obj\Debug\Cocodemer.Vivarium.Heron.pdb
