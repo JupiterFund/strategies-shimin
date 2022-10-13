@@ -1,0 +1,420 @@
+﻿<regression>
+  <macros>
+    <macro name="strat" value="Heron" />
+    <macro name="env" value="PRDA" />
+    <macro name="start" value="2022-09-14" />
+    <macro name="end" value="2022-09-14" />
+  </macros>
+  <launch arguments="-e=${env} -i=${strat}.${now} -h=tcp -l=INFO -lc=ColoredConsoleFile -PreCompilingBars -HistoricalDataCacheCapacityBase=110 -TickFilterInterval=00:00:00.500"
+	        start_time="${start}T08:00:00+0800"
+	        end_time="${end}T16:00:00+0800"
+	        run_once_interval="0:08:00:00"
+	        run_once_step="1:00:00:00" />
+  <options>
+    <option name="parallelism_level" value="20" />
+    <!--用多久的历史数据跑optimizer-->
+    <option name="back_interval" value="0M" />
+    <option name="move_step" value="0M" />
+    <!--用back出来的最优参数去跑多久的forward，来看在forward时间内，back出来的参数给出的performance-->
+    <option name="forward_interval" value="0M" />
+    <option name="need_order_report" value="true" />
+    <option name="stop_run_by" value="0.7" />
+    <!--输出文件类型-->
+    <option name="output_type" value="xlsx" />
+    <!--输出文件路径-->
+    <option name="output_file_pattern" value="C:\Cocodemer\${env}\Regression\${strat}\${now}_${start}_${end}\${strat}-{0}" />
+    <option name="risk_free_rate" value="0.05" />
+    <option name="network_latency" value="0.01s" />
+    <option name="hide_single_value_params_in_report" value="true" />
+    <option name="run_through_weekend" value="false" />
+    <option name="break_down_reports" value="Equity,MaxIntradayLossRate" />
+    <option name="sampling_interval" value="24h" />
+    <option name="regression_match_mode" value="PrevHandicapFirst" />
+  </options>
+  <market>
+
+    <!--上交所-->
+    <series name="113642">
+      <entry name="SHSE.CB+113642" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="603185">
+      <entry name="SHSE.S+603185" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="110061">
+      <entry name="SHSE.CB+110061" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="600674">
+      <entry name="SHSE.S+600674" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="110053">
+      <entry name="SHSE.CB+110053" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="600919">
+      <entry name="SHSE.S+600919" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="110085">
+      <entry name="SHSE.CB+110085" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="600438">
+      <entry name="SHSE.S+600438" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="113626">
+      <entry name="SHSE.CB+113626" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="603596">
+      <entry name="SHSE.S+603596" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="110052">
+      <entry name="SHSE.CB+110052" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="600996">
+      <entry name="SHSE.S+600996" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="113537">
+      <entry name="SHSE.CB+113537" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="603348">
+      <entry name="SHSE.S+603348" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="113534">
+      <entry name="SHSE.CB+113534" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="603876">
+      <entry name="SHSE.S+603876" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="113055">
+      <entry name="SHSE.CB+113055" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="601838">
+      <entry name="SHSE.S+601838" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="110038">
+      <entry name="SHSE.CB+110038" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="600566">
+      <entry name="SHSE.S+600566" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="110084">
+      <entry name="SHSE.CB+110084" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="600903">
+      <entry name="SHSE.S+600903" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="113585">
+      <entry name="SHSE.CB+113585" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="603896">
+      <entry name="SHSE.S+603896" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="110056">
+      <entry name="SHSE.CB+110056" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="600487">
+      <entry name="SHSE.S+600487" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="110079">
+      <entry name="SHSE.CB+110079" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="600926">
+      <entry name="SHSE.S+600926" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="113567">
+      <entry name="SHSE.CB+113567" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="603617">
+      <entry name="SHSE.S+603617" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="110077">
+      <entry name="SHSE.CB+110077" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="600461">
+      <entry name="SHSE.S+600461" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="113050">
+      <entry name="SHSE.CB+113050" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="601009">
+      <entry name="SHSE.S+601009" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="113504">
+      <entry name="SHSE.CB+113504" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="603989">
+      <entry name="SHSE.S+603989" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="113044">
+      <entry name="SHSE.CB+113044" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="601006">
+      <entry name="SHSE.S+601006" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="113615">
+      <entry name="SHSE.CB+113615" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="603979">
+      <entry name="SHSE.S+603979" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="113598">
+      <entry name="SHSE.CB+113598" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="603966">
+      <entry name="SHSE.S+603966" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="110068">
+      <entry name="SHSE.CB+110068" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="600388">
+      <entry name="SHSE.S+600388" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="113027">
+      <entry name="SHSE.CB+113027" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="601020">
+      <entry name="SHSE.S+601020" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="113591">
+      <entry name="SHSE.CB+113591" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="603687">
+      <entry name="SHSE.S+603687" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+<!--深交所-->
+    <series name="123027">
+      <entry name="SZSE.CB+123027" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="300487">
+      <entry name="SZSE.S+300487" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="128073">
+      <entry name="SZSE.CB+128073" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="002615">
+      <entry name="SZSE.S+002615" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="123123">
+      <entry name="SZSE.CB+123123" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="300666">
+      <entry name="SZSE.S+300666" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="128046">
+      <entry name="SZSE.CB+128046" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="002258">
+      <entry name="SZSE.S+002258" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="128081">
+      <entry name="SZSE.CB+128081" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="002203">
+      <entry name="SZSE.S+002203" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="123067">
+      <entry name="SZSE.CB+123067" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="300382">
+      <entry name="SZSE.S+300382" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="128029">
+      <entry name="SZSE.CB+128029" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="002078">
+      <entry name="SZSE.S+002078" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="123085">
+      <entry name="SZSE.CB+123085" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="300057">
+      <entry name="SZSE.S+300057" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="127058">
+      <entry name="SZSE.CB+127058" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="002422">
+      <entry name="SZSE.S+002422" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="128111">
+      <entry name="SZSE.CB+128111" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="002738">
+      <entry name="SZSE.S+002738" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="128106">
+      <entry name="SZSE.CB+128106" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="002840">
+      <entry name="SZSE.S+002840" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="123133">
+      <entry name="SZSE.CB+123133" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="300673">
+      <entry name="SZSE.S+300673" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="123012">
+      <entry name="SZSE.CB+123012" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="300057">
+      <entry name="SZSE.S+300057" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="128087">
+      <entry name="SZSE.CB+128087" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="002083">
+      <entry name="SZSE.S+002083" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="128121">
+      <entry name="SZSE.CB+128121" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="002930">
+      <entry name="SZSE.S+002930" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="123121">
+      <entry name="SZSE.CB+123121" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="300776">
+      <entry name="SZSE.S+300776" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="123057">
+      <entry name="SZSE.CB+123057" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="300586">
+      <entry name="SZSE.S+300586" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="127027">
+      <entry name="SZSE.CB+127027" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="000552">
+      <entry name="SZSE.S+000552" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="123139">
+      <entry name="SZSE.CB+123139" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="300811">
+      <entry name="SZSE.S+300811" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="123107">
+      <entry name="SZSE.CB+123107" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="300498">
+      <entry name="SZSE.S+300498" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="127045">
+      <entry name="SZSE.CB+127045" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="002714">
+      <entry name="SZSE.S+002714" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="128128">
+      <entry name="SZSE.CB+128128" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="002408">
+      <entry name="SZSE.S+002408" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="128095">
+      <entry name="SZSE.CB+128095" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="002812">
+      <entry name="SZSE.S+002812" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="128022">
+      <entry name="SZSE.CB+128022" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="002707">
+      <entry name="SZSE.S+002707" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="128141">
+      <entry name="SZSE.CB+128141" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="002034">
+      <entry name="SZSE.S+002034" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+    <series name="128015">
+      <entry name="SZSE.CB+128015" start="2010-01-01" end="2100-12-31" />
+    </series>
+    <series name="002279">
+      <entry name="SZSE.S+002279" start="2010-01-01" end="2100-12-31" />
+    </series>
+
+
+  </market>
+  <!--迭代参数-->
+  <optimizer scenarios="">
+
+    <param id="${strat}" name="ZgPrice" separator="," points="SHSE.CB+113642;SHSE.S+603185;102.4~SZSE.CB+123027;SZSE.S+300487;19.07~SHSE.CB+110061;SHSE.S+600674;8.8~SZSE.CB+128073;SZSE.S+002615;5.55~SZSE.CB+123123;SZSE.S+300666;51.05~SHSE.CB+110053;SHSE.S+600919;5.97~SZSE.CB+128046;SZSE.S+002258;12.8~SHSE.CB+110085;SHSE.S+600438;38.36~SHSE.CB+113626;SHSE.S+603596;35.88~SHSE.CB+110052;SHSE.S+600996;7.94~SZSE.CB+128081;SZSE.S+002203;9.62~SHSE.CB+113537;SHSE.S+603348;19.13~SZSE.CB+123067;SZSE.S+300382;9.96~SHSE.CB+113534;SHSE.S+603876;14.98~SZSE.CB+128029;SZSE.S+002078;8.25~SZSE.CB+123085;SZSE.S+300057;6.2~SZSE.CB+127058;SZSE.S+002422;16.65~SZSE.CB+128111;SZSE.S+002738;10.96~SHSE.CB+113055;SHSE.S+601838;13.9~SZSE.CB+128106;SZSE.S+002840;8.85~SZSE.CB+123133;SZSE.S+300673;17.83~SZSE.CB+123012;SZSE.S+300057;5.27~SHSE.CB+110038;SHSE.S+600566;22.72~SHSE.CB+110084;SHSE.S+600903;7.18~SHSE.CB+113585;SHSE.S+603896;21.64~SHSE.CB+110056;SHSE.S+600487;14.88~SZSE.CB+128087;SZSE.S+002083;4.16~SHSE.CB+110079;SHSE.S+600926;12.64~SHSE.CB+113567;SHSE.S+603617;7.45~SHSE.CB+110077;SHSE.S+600461;6.21~SZSE.CB+128121;SZSE.S+002930;19.53~SHSE.CB+113050;SHSE.S+601009;9.64~SZSE.CB+123121;SZSE.S+300776;119.68~SZSE.CB+123057;SZSE.S+300586;9.5~SHSE.CB+113504;SHSE.S+603989;20.51~SHSE.CB+113044;SHSE.S+601006;6.7~SZSE.CB+127027;SZSE.S+000552;3.08~SHSE.CB+113615;SHSE.S+603979;12.55~SZSE.CB+123139;SZSE.S+300811;76~SZSE.CB+123107;SZSE.S+300498;17.48~SHSE.CB+113598;SHSE.S+603966;9.48~SZSE.CB+127045;SZSE.S+002714;47.46~SZSE.CB+128128;SZSE.S+002408;5.69~SHSE.CB+110068;SHSE.S+600388;10.3~SHSE.CB+113027;SHSE.S+601020;10.17~SZSE.CB+128095;SZSE.S+002812;64.62~SZSE.CB+128022;SZSE.S+002707;5.95~SHSE.CB+113591;SHSE.S+603687;8.74~SZSE.CB+128141;SZSE.S+002034;15.67~SZSE.CB+128015;SZSE.S+002279;5" />
+    <param id="${strat}" name="TradingPeriods" separator="," points="[09:30:00;11:29:00][13:00:00;14:54:00]" />
+    <param id="${strat}" name="ValidTickPeriods" separator="," points="[09:25:00;11:30:00][13:00:00;15:00:00]" />
+    <param id="${strat}" name="Volume" separator="," points="1" />
+    <param id="${strat}" name="CloseTime" separator="," points="14:55" />
+    <param id="${strat}" name="ToleratedTickGapForSeconds" separator="," points="2" />
+    <param id="${strat}" name="OpenThreshold" separator="," points="-0.002" />
+    <param id="${strat}" name="CloseThreshold" separator="," points="0" />
+    <param id="${strat}" name="MaxWaitSeconds" separator="," points="120" />    
+    <param id="${strat}" name="SlipTickCount" separator="," points="1" />    
+
+  </optimizer>
+
+  <unity_config accounting_ccy="CNY">
+    <accounts>
+      <account name="CFFEX.Future.TestBroker" equity="CNY:1000000" lock_strategy="Normal" maker="10bp" taker="10bp" />
+    </accounts>
+    <strategies>
+      <strategy name="${strat}"
+                series="113642,123027,110061,128073,123123,110053,128046,110085,113626,110052,128081,113537,123067,113534,128029,123085,127058,128111,113055,128106,123133,123012,110038,110084,113585,110056,128087,110079,113567,110077,128121,113050,123121,123057,113504,113044,127027,113615,123139,123107,113598,127045,128128,110068,113027,128095,128022,113591,128141,128015,603185,300487,600674,002615,300666,600919,002258,600438,603596,600996,002203,603348,300382,603876,002078,300057,002422,002738,601838,002840,300673,300057,600566,600903,603896,600487,002083,600926,603617,600461,002930,601009,300776,300586,603989,601006,000552,603979,300811,300498,603966,002714,002408,600388,601020,002812,002707,603687,002034,002279"
+                strategy_category="${strat}"
+                location="C:\m\Vivarium\build\Netural\Vivarium\dll\Cocodemer.Vivarium.Heron\Cocodemer.Vivarium.${strat}"
+                assistant_ccys="">
+        <account equity="CNY:1000000" />
+      </strategy>
+    </strategies>
+  </unity_config>
+</regression>

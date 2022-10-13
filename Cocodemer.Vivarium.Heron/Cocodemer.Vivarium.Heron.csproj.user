@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\m\Systima\build\Netural\BackTesting\exe\Cocodemer.BackTesting.LocalRun\Cocodemer.BackTesting.LocalRun.exe</StartProgram>
+    <StartArguments>-e=PRDA -launcher_copied -h=tcp -assembly_info=Cocodemer.BackTesting.LocalRun -config=C:\m\Vivarium\Cocodemer.Vivarium.Heron\config.xml</StartArguments>
+  </PropertyGroup>
+</Project>

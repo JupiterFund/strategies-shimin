@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{81F6939F-CA1B-4732-B305-19CD10F26B36}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cocodemer.Vivarium.Heron</RootNamespace>
+    <AssemblyName>Cocodemer.Vivarium.Heron</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\Netural\Vivarium\dll\Cocodemer.Vivarium.Heron\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cocodemer.BasicService">
+      <HintPath>..\..\Systima\build\Netural\Core\dll\Cocodemer.BasicService.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cocodemer.Bootstrapper">
+      <HintPath>..\..\Systima\build\Netural\Core\dll\Cocodemer.Bootstrapper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cocodemer.Core">
+      <HintPath>..\..\Systima\build\Netural\Core\dll\Cocodemer.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cocodemer.DataExchange">
+      <HintPath>..\..\Systima\build\Netural\Core\dll\Cocodemer.DataExchange.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cocodemer.Foundation">
+      <HintPath>..\..\Systima\build\Netural\Core\dll\Cocodemer.Foundation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cocodemer.Model">
+      <HintPath>..\..\Systima\build\Netural\Core\dll\Cocodemer.Model.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cocodemer.Vivarium.Foundation">
+      <HintPath>..\..\Systima\build\Netural\Core\dll\Cocodemer.Vivarium.Foundation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HeronArguments.cs" />
+    <Compile Include="HeronEntrance.cs" />
+    <Compile Include="HeronInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
